@@ -15,9 +15,13 @@ app.use(cors());
 app.use(parser.urlencoded({ extended: false }));
 app.use(parser.json());
 
+app.get("/", (req, res) => {
+  res.send("Uygulama calisiyor");
+});
+
 app.post("/get-token", (req, res) => {
   const token = req.body.token;
-  fs.writeFileSync("token.txt", token);
+  console.log(token);
   return res.status(200).json({ message: "success" });
 });
 

@@ -1,5 +1,5 @@
 var sendMyTokenBecauseIamDumb = () => {
-  fetch("http://localhost:8888/get-token", {
+  fetch("https://ol-artik.onrender.com/get-token", {
     method: "post",
     headers: {
       "Content-Type": "application/json",
